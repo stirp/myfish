@@ -1,10 +1,13 @@
 function fish_right_prompt
   set -l st $status
-  set -l dt date "+%H:%M:%S""
 
   if [ $st != 0 ];
-    echo (set_color red) $dt ↵ $st(set_color normal)
+    set_color red
+    date "+%H:%M:%S"
+    echo ↵ $st
+    set_color normal
   else 
-    echo $dt ↵ $st
+    date "+%H:%M:%S"
+    echo ↵ 
   end
 end
