@@ -28,9 +28,9 @@ function __git_status
     set -l git_branch (_git_branch_name)
 
     if [ (_git_is_dirty) ]
-      set git_info '<'$git_branch"*"' >'
+      set git_info '<'$git_branch"*"'>'
     else
-      set git_info '<'$git_branch' >'
+      set git_info '<'$git_branch'>'
     end
 
     echo -n (set_color yellow) $git_info (set_color normal) 
